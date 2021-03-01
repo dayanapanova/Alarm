@@ -5,25 +5,13 @@ const currentTime = {
       currentTime.chr = document.getElementById("chr");
       currentTime.cmin = document.getElementById("cmin");
       currentTime.csec = document.getElementById("csec");
+
+    ac.thr = ac.createSel(23);
+    document.getElementById("tpick-h").appendChild(ac.thr);
+    ac.thm = ac.createSel(59);
+    document.getElementById("tpick-m").appendChild(ac.thm);
+    ac.ths = ac.createSel(59);
+    document.getElementById("tpick-s").appendChild(ac.ths);
   
-      // (A2) CREATE TIME PICKER - HR, MIN, SEC
-      currentTime.thr = currentTime.createSel(23);
-      document.getElementById("tpick-h").appendChild(currentTime.thr);
-      currentTime.thm = currentTime.createSel(59);
-      document.getElementById("tpick-m").appendChild(currentTime.thm);
-      currentTime.ths = currentTime.createSel(59);
-      document.getElementById("tpick-s").appendChild(currentTime.ths);
-  
-      // (A3) CREATE TIME PICKER - SET, RESET
-      currentTime.tset = document.getElementById("tset");
-      currentTime.tset.addEventListener("click", currentTime.set);
-      currentTime.treset = document.getElementById("treset");
-      currentTime.treset.addEventListener("click", currentTime.reset);
-  
-      // (A4) GET ALARM SOUND
-      currentTime.sound = document.getElementById("alarm-sound");
-  
-      // (A5) START THE CLOCK
-      currentTime.alarm = null;
-      setInterval(currentTime.tick, 1000);
-    },
+      
+    }
